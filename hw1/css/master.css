@@ -3,9 +3,32 @@ img {
 }
 
 .video_carousel_card {
+  display: inline-block;
   width: 300px;
+  margin: 10px;
+}
+
+.video_wrapper, .avatar_wrapper {
+  /* replace default setting 造成非預期的撐高元素高度 */
+  line-height: 0;
 }
 
 .avatar_wrapper {
   width: 20%;
+  margin: 10px;
+}
+
+.thumbnail {
+  /* circle avatar */
+  border-radius: 50%;
+}
+
+.video_carousel_row {
+  text-align: center;
+}
+
+.info_wrapper {
+  display: flex;
+  align-items: center;
+  text-align: left;
 }
