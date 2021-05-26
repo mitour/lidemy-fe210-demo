@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+.bg {
+    overflow: auto;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url(https://lolstatic-a.akamaihd.net/lolkit/1.1.6/resources/images/bg-default.jpg);
+    background-attachment: fixed;
+}
+
+.bg::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+img {
+  width: 100%;
+}
+
+.video_carousel_card {
+  display: inline-block;
+  width: 300px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: filter 1s, box-shadow 1s;
+}
+
+.video_carousel_card:hover {
+  filter: brightness(1.4);
+  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.video_wrapper, .avatar_wrapper {
+  /* replace default setting 造成非預期的撐高元素高度 */
+  line-height: 0;
+}
+
+.avatar_wrapper {
+  width: 20%;
+  margin: 5px 10px;
+}
+
+.thumbnail {
+  /* circle avatar */
+  border-radius: 50%;
+}
+
+.video_carousel {
+  margin: 20px 0;
+  position: relative;
+}
+
+.video_carousel_row {
+  text-align: center;
+}
+
+.info_wrapper {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.text_wrapper {
+  line-height: 0.8em;
+  margin: 0 10px;
+}
