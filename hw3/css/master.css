@@ -1,0 +1,74 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.bg {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://lolstatic-a.akamaihd.net/lolkit/1.1.6/resources/images/bg-default.jpg);
+  background-attachment: fixed;
+}
+.bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video_carousel {
+  position: relative;
+  margin: 20px 0;
+}
+
+.video_carousel_row {
+  text-align: center;
+}
+
+.video_carousel_card {
+  display: inline-block;
+  width: 300px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: filter 1s, box-shadow 1s;
+}
+.video_carousel_card:hover {
+  filter: brightness(1.4);
+  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.video_wrapper {
+  /* replace default setting 造成非預期的撐高元素高度 */
+  line-height: 0;
+}
+
+.info_wrapper {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.info_wrapper .avatar_wrapper {
+  width: 20%;
+  margin: 5px 10px;
+  line-height: 0;
+}
+.info_wrapper .avatar_wrapper .thumbnail {
+  /* circle avatar */
+  border-radius: 50%;
+}
+.info_wrapper .text_wrapper {
+  line-height: 0.8em;
+  margin: 0 10px;
+}
+
+/*# sourceMappingURL=master.css.map */
